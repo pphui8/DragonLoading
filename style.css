@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #ffea3f;
+    position: relative;
+}
+.flip_container {
+    width: 44%;
+    height: 11%;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.flip_container li {
+    position: relative;
+    float:left;
+    width: 20%;
+    height: 100%;
+    list-style: none;
+}
+.flip_container li b {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    user-select: none;
+}
+.flip_container .flip {
+    transition: .2s;
+    transform-origin: center;
+}
+.flip:hover {
+    transform: rotateY(180deg);
+}
