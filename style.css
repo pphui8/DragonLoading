@@ -20,14 +20,46 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.flip_container li {
+.flip_container .flip {
     position: relative;
     float:left;
     width: 20%;
     height: 100%;
     list-style: none;
+    transition: .2s;
+    transform-origin: center;
+    backface-visibility: hidden;
+    transform-style:preserve-3d;
 }
-.flip_container li b {
+.flip_container .flip .point {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.flip_container .flip .point p {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: calc(50% + 3px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+.flip_container .flip .character {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.flip_container .flip .character b {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -35,10 +67,6 @@ body {
     font-size: 35px;
     user-select: none;
 }
-.flip_container .flip {
-    transition: .2s;
-    transform-origin: center;
-}
 .flip:hover {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
