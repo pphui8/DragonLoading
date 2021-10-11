@@ -40,7 +40,7 @@ var emojis = [
     "凸凹凸凹凸",
 ]
 
-window.onload = function(){
+function Loop() {
     // 获取ul，然后再获取li
     var ul = document.getElementsByClassName('flip_container')
     var lis = ul[0].getElementsByTagName("li")
@@ -55,4 +55,14 @@ window.onload = function(){
             element.style.transform = 'rotateY(-180deg)'
         },1000*(i+1))
     }
+    // 翻回去
+    for (let i = 0; i < lis.length; i++) {
+        const element = lis[i];
+        element.style.transform = 'rotateY(0deg)';
+    }
+}
+
+window.onload = function(){
+    Loop();
+    setInterval(Loop, 10000);
 }
