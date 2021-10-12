@@ -58,6 +58,7 @@ body {
     top:0;
     transform: rotateY(180deg);
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 .flip_container .flip .character b {
     position: absolute;
