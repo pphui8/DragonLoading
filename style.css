@@ -68,6 +68,3 @@ body {
     font-size: 35px;
     user-select: none;
 }
-.flip:hover {
-    transform: rotateY(-180deg);
-}
